@@ -1,0 +1,3 @@
+ssh www-inara@www.cyberfred.eu
+cd public/
+git pull
