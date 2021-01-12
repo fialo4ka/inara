@@ -1,3 +1,7 @@
 ssh www-inara@www.cyberfred.eu
 cd public/
 git pull
+
+
+//run in vs
+python manage.py runserver

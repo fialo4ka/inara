@@ -1,0 +1,434 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        Inara Petrusewicz
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index/w3.css/w3.css' %}"  />
+    <link rel="stylesheet" href="{% static 'index/stle.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#akril" class="w3-bar-item w3-button">PAINTINGS</a>
+        <a href="#water" class="w3-bar-item w3-button">WATERCOLORS</a>
+        <a href="#graph" class="w3-bar-item w3-button">GRAPHICS</a>
+        <a href="#gesig" class="w3-bar-item w3-button">DESIGN</a>
+        <a href="#exhebition" class="w3-bar-item w3-button">EXHEBITIONS</a>
+        <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#akril" onclick="w3_close()" class="w3-bar-item w3-button">PAINTINGS</a>
+    <a href="#water" onclick="w3_close()" class="w3-bar-item w3-button">WATERCOLORS</a>
+    <a href="#graph" onclick="w3_close()" class="w3-bar-item w3-button">GRAPHICS</a>
+    <a href="#gesig" onclick="w3_close()" class="w3-bar-item w3-button">DESIGN</a>
+    <a href="#exhebition" onclick="w3_close()" class="w3-bar-item w3-button">EXHEBITIONS</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+        <div class="w3-display-bottomleft w3-container w3-sand w3-hover-light-grey" style="bottom:10%;opacity:0.7;width:70%">
+            <h2><b>Inara Petrusewicz</b></h2>
+            <h6>Artist / illustrator, Wall Painting designer </h6>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <div class="w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">About</h3><br>
+        <div class="w3-col m6">
+            <p>
+                I was born in November 17th, 1969, Daugavpils <br/>
+                In 1986 I was Graduated from Daugavpils Art Shool, and from 1987 to 1990 study in Latvian Academy of Art, Riga	 <br/>	
+                I take my inspiretion from	David Hockney, Mark Chagall, Quentin Blake, Nele Zirnite, Alexander Calder	 <br/>		
+                My professional Membership: Daugavpils Regional Association of Artist
+            </p>
+        </div>
+        <div class="w3-col m6">
+            <img src="./img/inara_2.jpg" class="w3-round w3-image " alt="Inara" height="750">
+        </div>
+    </div>
+
+    <!-- PAINTINGS Section -->
+    <div class="w3-container w3-padding-64" id="akril">
+        <h3 class="w3-center">PAINTINGS</h3>
+        <div class="w3-row" id="myGrid" style="margin-bottom:128px">
+            <div class="w3-third">
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_quin_1.jpg" class="w3-round w3-image art-size" >
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_rabbit_2.jpg"  class="w3-round w3-image art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_gearl2.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_gearl5.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_pair5.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_gearl6.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_quin_2.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_gearl.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_gearl4.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_pair.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_pair4.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_rabbit.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_boat.jpg"  class="w3-round w3-image art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_gearl3.jpg"  class="w3-round w3-image art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_musik.jpg"  class="w3-round w3-image art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_pair3.jpg"  class="w3-round w3-image art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_pair2.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/paint_plain.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <!-- WATERCOLORS Section -->
+    <div class="w3-container w3-padding-64" id="water">
+        <h3 class="w3-center">WATERCOLORS</h3>
+        <div class="w3-row" id="myGrid" style="margin-bottom:128px">
+            <div class="w3-third">
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/watercolor_caces.jpg" class="w3-round w3-image art-size" >
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/watercolor_face_1.jpg"  class="w3-round w3-image art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/watercolor_face_2.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/watercolor_face_3.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/watercolor_sea.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/watercolor_sone.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/watercolor_tree.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <!-- GRAPHICS Section -->
+    <div class="w3-container w3-padding-64" id="graph">
+        <h3 class="w3-center">GRAPHICS</h3>
+        <div class="w3-row" id="myGrid" style="margin-bottom:128px">
+            <div class="w3-third">
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/grap_pfoto.jpg" class="w3-round w3-image art-size" >
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/grap_rabbit.jpg"  class="w3-round w3-image art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/grap_see.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/grap_swim.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/grap_port.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+                <div class="w3-card-4 m3 w3-border">
+                    <img src="./img/grap_daba.jpg"  class="w3-round w3-image art-height art-size">
+                    <div class="w3-container w3-center">
+                        <p>For Sale</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <!-- DESIGN Section -->
+    <div class="w3-container w3-padding-64" id="gesig">
+        <h3 class="w3-center">DESIGN</h3>
+        <div class="w3-row" id="myGrid" style="margin-bottom:128px">
+            <div class="w3-third">
+                <img src="" class="w3-round w3-image art-size" >
+                <img src=""  class="w3-round w3-image art-size">
+                <img src=""  class="w3-round w3-image art-size">
+                <img src=""  class="w3-round w3-image art-size">
+                <img src=""  class="w3-round w3-image art-size">
+                <img src=""  class="w3-round w3-image art-size">
+            </div>
+
+            <div class="w3-third">
+                <img src=""  class="w3-round w3-image art-height art-size">
+                <img src=""  class="w3-round w3-image art-height art-size">
+                <img src=""  class="w3-round w3-image art-height art-size">
+                <img src=""  class="w3-round w3-image art-height art-size">
+                <img src=""  class="w3-round w3-image art-height art-size">
+                <img src=""  class="w3-round w3-image art-height art-size">
+            </div>
+
+            <div class="w3-third">
+                <img src=""  class="w3-round w3-image art-height art-size">
+                <img src=""  class="w3-round w3-image art-height art-size">
+                <img src=""  class="w3-round w3-image art-height art-size">
+                <img src=""  class="w3-round w3-image art-height art-size">
+                <img src=""  class="w3-round w3-image art-height art-size">
+                <img src=""  class="w3-round w3-image art-height art-size">
+            </div>
+        </div>        
+    </div>
+
+    <!-- EXHEBITIONS Section -->
+    <div class="w3-container w3-padding-64" id="exhebition">
+        <h3 class="w3-center">Solo Exhibitions</h3>
+        <p>
+            2017 Mark Rothko Art Center, Daugavpils. Latvia<br/>
+            2017 Kraziai art rezidence, Kraziu Motiejaus Kazimiero Sarbievijaus kulturos centras, Lithuania<br/>
+            2017 Latgale art and craft center/ Livani glass museum, Latvia<br/>
+            2017 “ 92 Degrees Coffe”, Liverpool<br/>
+            2014 “Life love art” Galleri Gl. Lejre, Denmark<br/>
+            2014 Latgale Central Library, Daugavpils, Latvia<br/>
+            2013 Ecco Center, Denmark<br/>
+            2009 Horsens, Denmark<br/>
+            2009 Daugavpils University, Latvia<br/>
+            2009 “Promen” Gallery, Daugavpils, Latvia 2008, 2005, 2002, 1999, 1997 Galleri GL. Lejre , Denmark 2007 Langes Ma-
+            gasin, Frederikssund ,Denmark<br/>
+            2005 “Lykkens Galocher”, Det Danske Kulturinstitut, Riga, Latvia<br/>
+            2004 Russian Gallery, Vilnus, Lithuania<br/>
+            2004 “Maksla XO” Gallery, Riga, Latvia<br/>
+            2004 13th International Festival of Arts, “Slavianski Bazaar in Vitebsk, Belarus<br/>
+            2003 AUL Gallery, Union of Latvia, Riga, Latvia
+            1999, 1997,1996 Daugavpils, Latvia<br/>
+            1991 “Krasts” Gallery , Rigas Modes Hall, Riga, Latvia<br/>
+        </p> 
+        <h3 class="w3-center">Group exhibitions:</h3>
+            <p>   
+            2017 Mark Rothko Art Center, Daugavpils, Latvia<br/>
+            2017 Vitebsk Central Museum of Modern Art, Belarus<br/>
+            2017 A. Suna art Gallery ,Riga, Latvia<br/>
+            2016 ”Mixed Media”, Gl. Lejre, Denmark<br/>
+            2016 Mark Rothko Art Center, “Untaitled”, Daugavpils, Latvia<br/>
+            2016 “Bann” Art<br/>
+            2016 Art festival, France<br/>
+            2016 Axposition Assotiation “Az”arts, Chateau d ́Aubenas (Ardeshe), France<br/>
+            2015 International group exhibition, Axon Cable, Montmirail, France<br/>
+            2015 International Festival Art of Dolss “NukuKunst”, Tallinn, Estonia<br/>
+            2015 Mala Makslas Centrs, Daugavpils, Latvia<br/>
+            2015 Mala Makslas Centrs, Livani, Latvia<br/>
+            2015 Mark Rothko Art Centre, “Klaunade”, Daugavpils, Latvia<br/>
+            2014 Rokiskis Regional Museum, Lithuania<br/>
+            2014 Art Herning, Galleri GL.Lejre, Denmark<br/>
+            2012 International group exhibition, Mark Rothko Art Centre, Daugavpils, Latvia<br/>
+            2012 Art Herning, Gl. Lejre, Denmark<br/>
+            2009 Museum Marc Shagall, Vitebsk, Belarus<br/>
+            2009 Project “Akvarelis.Akvarelists”, Rezekne, Latvia<br/>
+            2009 “No gleznas izkapis”, with artist group “Kapec 5”, Daugavpils, Latvia<br/>
+            2008 Project “Gleina”, Daugavpils, Latvia<br/>
+            2007 Gallery “Manss”, Ekabpils, Latvia<br/>
+            2007 Art Museum, Madona, Latvia<br/>
+            2007 Group exhibition in Babrujsk, Homel, Minsk, Belarus<br/>
+            2007 The International exhibition in Marc Chagall Art Center, Vitebsk, Belarus<br/>
+            2007 International Graphic Festival”, St.Peterburg, Russia<br/>
+            2006 International Bienale of Graphic, ”Maneze” Hall, St.Peterburg, Russia<br/>
+            2006 Project A.Maevsky, Art Hall ,Riga, Latvia<br/>
+            2005 “Mark Rothko”, International Plein Air, Daugavpils, Latvia<br/>
+            2005 “MakslaXO” Gallery, Riga, Latvia<br/>
+            2005,2003,2001,1999 Art Herning, Galleri Gl. Lejre, Denmark<br/>
+            2004 City Museum, Preili, Latvia<br/>
+            2004 City Museum, Kraslava, Latvia<br/>
+            2004 Art Days, Daugavpils, Latvia<br/>
+            2002 Galleri Gl. Lejre, Denmark<br/>
+            2001,2000,1999,1998 Art Copenhagen, Galleri Gl. Lejre, Denmark<br/>
+            1999 Art Days, Daugavpils, Latvia<br/>
+            1999 Anger, France<br/>
+            1999 Dusetas, Lithuania<br/>
+            1999 Ribnic-Damg., Germany<br/>
+            1998 “ X år” ,Galleri Gl. Lejre, Denmark<br/>
+            1998 Zarasai, Lithuania<br/>
+            1997 II International Marc Shagall Bienalle, Vitebsk, Belarus<br/>
+            1993 “Plein Air in Sweden”, Riga, Latvia<br/>
+            1992 Kunstmuseum, Visby, Sweden<br/>
+            1992 Artists Union, Finspong, Sweden<br/>
+            1991 “Artist from Daugavpils”, Rigas Modes Hall, Riga, Latvia<br/>
+            1990 “Autumn 90” Exhibition Hall of States Museum of Art Arsenals, Riga, Latvia<br/>
+        </p> 
+    </div>
+
+    <!-- CONTACT Section -->
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px" id="contact"> 
+        <h3 class="w3-center">CONTACT</h3>
+        <div style="margin-top:48px">
+            <p><i class="fa fa-phone fa-fw w3-xlarge w3-margin-right"></i> Tel. +371 29793821</p>
+            <p><i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right"> </i> Email: lamachenno108@gmail.com</p>
+        </div>
+        <a src="https://www.facebook.com/inara.petrusevich"><i class="fa fa-facebook-official w3-hover-opacity w3-xxlarge"></i></a>
+        <a src="http://www.pinterest.com/inarapetrusevic/"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+        <a src=""><i class="fa fa-instagram w3-hover-opacit w3-xxlarge"></i></a>
+        <p class="w3-small">Created by <a href="https://fialo.info" target="_blank" class="w3-hover-text-green">fialo4ka</a> 2021 All Rights Reserved.</p>
+    </footer>
+        
+    <script src="{% static 'index/site.js' %}"></script>
+    </body>    
+</html> 
