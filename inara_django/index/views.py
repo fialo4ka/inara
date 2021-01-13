@@ -9,6 +9,6 @@ def home(request):
         request,
         'index/index_there.html',
         {
-            
+            #art_list = 
         }
     )

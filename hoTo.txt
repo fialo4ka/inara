@@ -5,3 +5,8 @@ git pull
 
 //run in vs
 python manage.py runserver
+
+
+//update db
+python manage.py  makemigrations index
+python manage.py migrate
