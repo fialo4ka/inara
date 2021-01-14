@@ -77,9 +77,9 @@
             <div class="w3-third">
                 {% for art in paint_list1 %}
                     <div class="w3-card-4 m3 w3-border">
-                        <img src="./img/paint_quin_1.jpg" class="w3-round w3-image art-size" >
+                        <img src=".{{ art.path }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>For Sale</p>
+                            <p>{{ art.art_status }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -87,9 +87,9 @@
             <div class="w3-third">
                 {% for art in paint_list2 %}
                     <div class="w3-card-4 m3 w3-border">
-                        <img src="./img/paint_quin_1.jpg" class="w3-round w3-image art-size" >
+                        <img src=".{{ art.path }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>For Sale</p>
+                            <p>{{ art.art_status }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -97,9 +97,9 @@
             <div class="w3-third">
                 {% for art in paint_list3 %}
                     <div class="w3-card-4 m3 w3-border">
-                        <img src="./img/paint_quin_1.jpg" class="w3-round w3-image art-size" >
+                        <img src=".{{ art.path }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>For Sale</p>
+                            <p>{{art.art_status }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -111,9 +111,36 @@
     <div class="w3-container w3-padding-64" id="water">
         <h3 class="w3-center">WATERCOLORS</h3>
         <div class="w3-row" id="myGrid" style="margin-bottom:128px">
-
-
-
+            <div class="w3-third">
+                {% for art in water_list1 %}
+                    <div class="w3-card-4 m3 w3-border">
+                        <img src=".{{ art.path }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>{{ art.art_status }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="w3-third">
+                {% for art in water_list2 %}
+                    <div class="w3-card-4 m3 w3-border">
+                        <img src=".{{ art.path }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>{{ art.art_status }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="w3-third">
+                {% for art in water_list3 %}
+                    <div class="w3-card-4 m3 w3-border">
+                        <img src=".{{ art.path }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>{{art.art_status }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div> 
         </div>        
     </div>
 
@@ -121,7 +148,36 @@
     <div class="w3-container w3-padding-64" id="graph">
         <h3 class="w3-center">GRAPHICS</h3>
         <div class="w3-row" id="myGrid" style="margin-bottom:128px">
-
+            <div class="w3-third">
+                {% for art in graph_list1 %}
+                    <div class="w3-card-4 m3 w3-border">
+                        <img src=".{{ art.path }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>{{ art.art_status }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="w3-third">
+                {% for art in graph_list2 %}
+                    <div class="w3-card-4 m3 w3-border">
+                        <img src=".{{ art.path }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>{{ art.art_status }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="w3-third">
+                {% for art in graph_list3 %}
+                    <div class="w3-card-4 m3 w3-border">
+                        <img src=".{{ art.path }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>{{art.art_status }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div> 
         </div>        
     </div>
 
@@ -129,7 +185,36 @@
     <div class="w3-container w3-padding-64" id="gesig">
         <h3 class="w3-center">DESIGN</h3>
         <div class="w3-row" id="myGrid" style="margin-bottom:128px">
-
+            <div class="w3-third">
+                {% for art in des_list1 %}
+                    <div class="w3-card-4 m3 w3-border">
+                        <img src=".{{ art.path }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>{{ art.art_status }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="w3-third">
+                {% for art in des_list2 %}
+                    <div class="w3-card-4 m3 w3-border">
+                        <img src=".{{ art.path }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>{{ art.art_status }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="w3-third">
+                {% for art in des_list3 %}
+                    <div class="w3-card-4 m3 w3-border">
+                        <img src=".{{ art.path }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>{{art.art_status }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div> 
         </div>        
     </div>
 
