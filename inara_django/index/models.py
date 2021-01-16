@@ -19,7 +19,7 @@ class ColumnNumber(models.Model):
         return self.name
 
 class ArtWork(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=255)
     path = models.CharField(max_length=100)
     price = models.DecimalField(decimal_places=2, max_digits=10, null=True)
     size = models.CharField(max_length=100, null=True)
@@ -27,8 +27,7 @@ class ArtWork(models.Model):
     art_type = models.ForeignKey(ArtType, on_delete=models.RESTRICT, default=1, help_text='Select art type')
     art_status = models.ForeignKey(ArtStatus, default=1, on_delete=models.RESTRICT, help_text='Select art status')
     column_number = models.ForeignKey(ColumnNumber, default=1, on_delete=models.RESTRICT, help_text='Select art type', null=True)
-
+    photo = models.ImageField(upload_to='artWorks', null=True)
+    
     def __str__(self):
         return f'{self.name} {str(self.art_type)}'
-
-
