@@ -8,7 +8,7 @@ from django.contrib import admin
 from .models import ArtWork
 
 class ArtWorkAdmin(admin.ModelAdmin):
-    list_display = ('name', 'path', 'art_type', 'art_status', 'year', 'price')
+    list_display = ('name', 'art_type', 'column_number', 'art_status', 'price', 'year')
 
 # Register the admin class with the associated model
 admin.site.register(ArtWork, ArtWorkAdmin)

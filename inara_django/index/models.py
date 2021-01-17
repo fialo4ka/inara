@@ -19,8 +19,7 @@ class ColumnNumber(models.Model):
         return self.name
 
 class ArtWork(models.Model):
-    name = models.CharField(max_length=255)
-    path = models.CharField(max_length=100)
+    name = models.TextField(max_length=600)
     price = models.DecimalField(decimal_places=2, max_digits=10, null=True)
     size = models.CharField(max_length=100, null=True)
     year = models.IntegerField(null=True)

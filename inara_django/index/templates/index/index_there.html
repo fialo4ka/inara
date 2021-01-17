@@ -76,30 +76,30 @@
         <div class="w3-row" id="myGrid" style="margin-bottom:128px">
             <div class="w3-third">
                 {% for art in paint_list1 %}
-                    <div class="w3-card-4 m3 w3-border">
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
                         <img src="/{{ art.photo }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>{{ art.art_status }}</p>
+                            <p>'{{ art.art_status }}'</p>
                         </div>
                     </div>
                 {% endfor %}
             </div>
             <div class="w3-third">
                 {% for art in paint_list2 %}
-                    <div class="w3-card-4 m3 w3-border">
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
                         <img src="/{{ art.photo }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>{{ art.art_status }}</p>
+                            <p>'{{ art.art_status }}'</p>
                         </div>
                     </div>
                 {% endfor %}
             </div>
             <div class="w3-third">
                 {% for art in paint_list3 %}
-                    <div class="w3-card-4 m3 w3-border">
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
                         <img src="/{{ art.photo }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>{{art.art_status }}</p>
+                            <p>'{{art.art_status }}'</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -113,30 +113,30 @@
         <div class="w3-row" id="myGrid" style="margin-bottom:128px">
             <div class="w3-third">
                 {% for art in water_list1 %}
-                    <div class="w3-card-4 m3 w3-border">
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
                         <img src="/{{ art.photo }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>{{ art.art_status }}</p>
+                            <p>'{{ art.art_status }}'</p>
                         </div>
                     </div>
                 {% endfor %}
             </div>
             <div class="w3-third">
                 {% for art in water_list2 %}
-                    <div class="w3-card-4 m3 w3-border">
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
                         <img src="/{{ art.photo }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>{{ art.art_status }}</p>
+                            <p>'{{ art.art_status }}'</p>
                         </div>
                     </div>
                 {% endfor %}
             </div>
             <div class="w3-third">
                 {% for art in water_list3 %}
-                    <div class="w3-card-4 m3 w3-border">
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
                         <img src="/{{ art.photo }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>{{art.art_status }}</p>
+                            <p>'{{art.art_status }}'</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -150,30 +150,30 @@
         <div class="w3-row" id="myGrid" style="margin-bottom:128px">
             <div class="w3-third">
                 {% for art in graph_list1 %}
-                    <div class="w3-card-4 m3 w3-border">
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
                         <img src="/{{ art.photo }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>{{ art.art_status }}</p>
+                            <p>'{{ art.art_status }}'</p>
                         </div>
                     </div>
                 {% endfor %}
             </div>
             <div class="w3-third">
                 {% for art in graph_list2 %}
-                    <div class="w3-card-4 m3 w3-border">
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
                         <img src="/{{ art.photo }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>{{ art.art_status }}</p>
+                            <p>'{{ art.art_status }}'</p>
                         </div>
                     </div>
                 {% endfor %}
             </div>
             <div class="w3-third">
                 {% for art in graph_list3 %}
-                    <div class="w3-card-4 m3 w3-border">
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
                         <img src="/{{ art.photo }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>{{art.art_status }}</p>
+                            <p>'{{art.art_status }}'</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -187,30 +187,30 @@
         <div class="w3-row" id="myGrid" style="margin-bottom:128px">
             <div class="w3-third">
                 {% for art in des_list1 %}
-                    <div class="w3-card-4 m3 w3-border">
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
                         <img src="/{{ art.photo }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>{{ art.art_status }}</p>
+                            <p>'{{ art.art_status }}'</p>
                         </div>
                     </div>
                 {% endfor %}
             </div>
             <div class="w3-third">
                 {% for art in des_list2 %}
-                    <div class="w3-card-4 m3 w3-border">
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
                         <img src="/{{ art.photo }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>{{ art.art_status }}</p>
+                            <p>'{{ art.art_status }}'</p>
                         </div>
                     </div>
                 {% endfor %}
             </div>
             <div class="w3-third">
                 {% for art in des_list3 %}
-                    <div class="w3-card-4 m3 w3-border">
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
                         <img src="/{{ art.photo }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
-                            <p>{{art.art_status }}</p>
+                            <p>'{{art.art_status }}'</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -300,13 +300,32 @@
         <h3 class="w3-center">CONTACT</h3>
         <div style="margin-top:48px">
             <p><i class="fa fa-phone fa-fw w3-xlarge w3-margin-right"></i> Tel. +371 29793821</p>
-            <p><i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right"> </i> Email: lamachenno108@gmail.com</p>
+            <p><i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right"> </i><a href="mailto:lamachenno108@gmail.com">Email: lamachenno108@gmail.com</a></p>
         </div>
         <a src="https://www.facebook.com/inara.petrusevich"><i class="fa fa-facebook-official w3-hover-opacity w3-xxlarge"></i></a>
         <a src="http://www.pinterest.com/inarapetrusevic/"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
         <a src=""><i class="fa fa-instagram w3-hover-opacit w3-xxlarge"></i></a>
         <p class="w3-small">Created by <a href="https://fialo.info" target="_blank" class="w3-hover-text-green">fialo4ka</a> 2021 All Rights Reserved.</p>
     </footer>
+
+    <div id="artModal" class="modal w3-modal">
+        <div class="modal-content w3-container">
+            <div>
+                <span class="modalClose" onclick="CloseArtModal();">&times;</span>
+            </div>
+            <div>
+                <div class="w3-col m6 w3-center">
+                    <img id="photo" class="w3-round w3-image" > 
+                </div>
+                <div class="w3-col m5 w3-center w3-margin-left">
+                    <div id="text" class="w3-left-align"></div>
+                    <div id="info" class="w3-left-align"></div>
+                    <div id="price" class="w3-left-align"></div>
+                    <a id="order" class="mailto" href="mailto:lamachenno108@gmail.com?subject=Ortder artwork&body=Hello%20I'm%20interested%20in%20ordering%20artwork%20*artwort*">Order</a>
+                </div> 
+            </div>
+        </div>
+    </div>
         
     <script src="{% static 'index/site.js' %}"></script>
     </body>    
