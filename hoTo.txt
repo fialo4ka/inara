@@ -10,3 +10,7 @@ python manage.py runserver
 //update db
 python manage.py  makemigrations index
 python manage.py migrate
+
+//server publish
+byobu
+./env/bin/gunicorn --bind=unix://../inara.cc.sock inara_django.wsgi
