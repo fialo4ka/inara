@@ -19,7 +19,7 @@ var modal = document.getElementById("artModal");
 // When the user clicks the button, open the modal 
 function OpenArtModal(photo, price, size, year, text) {
   modal.style.display = "block";
-  document.getElementById("photo").src = "/" + photo;
+  document.getElementById("photo").src = "/artWorks/" + photo;
   document.getElementById("text").innerHTML = text;
   var info = document.getElementById("info");
   info.innerHTML = "";
