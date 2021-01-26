@@ -26,7 +26,7 @@ SECRET_KEY = 'v@+8&lsu%^&=^wlngd1k@o_jd2%-t2g$!8o_f8eap=*&r#p52b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['inara.cc']
+ALLOWED_HOSTS = ['www.inara.cc','inara.cc']
 
 
 # Application definition
