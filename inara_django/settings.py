@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'v@+8&lsu%^&=^wlngd1k@o_jd2%-t2g$!8o_f8eap=*&r#p52b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.inara.cc','inara.cc']
+ALLOWED_HOSTS = ['127.0.0.1','inara.cc', 'www.inara.cc']
 
 
 # Application definition
