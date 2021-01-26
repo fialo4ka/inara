@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.html import mark_safe
 
 class ArtType(models.Model):
     name = models.CharField(max_length=50, help_text='Art type')
@@ -28,5 +29,9 @@ class ArtWork(models.Model):
     column_number = models.ForeignKey(ColumnNumber, default=1, on_delete=models.RESTRICT, help_text='Select art type', null=True)
     photo = models.ImageField(upload_to='artWorks', null=True)
     
+
     def __str__(self):
         return f'{self.name} {str(self.art_type)}'
+    
+    def image_tag(self):
+        return mark_safe('<img src="/artWorks/%s" height="100" />' % (self.photo))
