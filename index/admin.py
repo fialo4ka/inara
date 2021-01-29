@@ -9,7 +9,7 @@ from .models import ArtWork
 
 class ArtWorkAdmin(admin.ModelAdmin):
     readonly_fields = ('image_tag',)
-    list_display = ('image_tag', 'name', 'art_type', 'column_number', 'art_status', 'price', 'year')
+    list_display = ('image_tag', 'name', 'art_type', 'sort', 'column_number', 'art_status', 'price', 'year')
 
 # Register the admin class with the associated model
 admin.site.register(ArtWork, ArtWorkAdmin)
