@@ -22,7 +22,8 @@
         <a href="#akril" class="w3-bar-item w3-button">PAINTINGS</a>
         <a href="#water" class="w3-bar-item w3-button">WATERCOLORS</a>
         <a href="#graph" class="w3-bar-item w3-button">GRAPHICS</a>
-        <a href="#gesig" class="w3-bar-item w3-button">DESIGN</a>
+        <a href="#gesig" class="w3-bar-item w3-button">DESIGN</a>  
+        <a href="#prints" class="w3-bar-item w3-button">PRINTS</a>
         <a href="#exhebition" class="w3-bar-item w3-button">EXHEBITIONS</a>
         <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
         </div>
@@ -42,6 +43,7 @@
     <a href="#water" onclick="w3_close()" class="w3-bar-item w3-button">WATERCOLORS</a>
     <a href="#graph" onclick="w3_close()" class="w3-bar-item w3-button">GRAPHICS</a>
     <a href="#gesig" onclick="w3_close()" class="w3-bar-item w3-button">DESIGN</a>
+    <a href="#prints" onclick="w3_close()" class="w3-bar-item w3-button">PRINTS</a>
     <a href="#exhebition" onclick="w3_close()" class="w3-bar-item w3-button">EXHEBITIONS</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
     </nav>
@@ -218,6 +220,42 @@
         </div>        
     </div>
 
+    <!-- prints Section -->
+    <div class="w3-container w3-padding-64" id="prints">
+        <h3 class="w3-center">PRINTS</h3>
+        <div class="w3-row" id="myGrid" style="margin-bottom:128px">
+            <div class="w3-third">
+                {% for art in print_list1 %}
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
+                        <img src="/artWorks/{{ art.photo }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>'{{ art.art_status }}'</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="w3-third">
+                {% for art in print_list2 %}
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
+                        <img src="/artWorks/{{ art.photo }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>'{{ art.art_status }}'</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="w3-third">
+                {% for art in print_list2 %}
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
+                        <img src="/artWorks/{{ art.photo }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>'{{art.art_status }}'</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div> 
+        </div>        
+    </div>
     <!-- EXHEBITIONS Section -->
     <div class="w3-container w3-padding-64" id="exhebition">
         <h3 class="w3-center">Solo Exhibitions</h3>

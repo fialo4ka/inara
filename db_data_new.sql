@@ -12,3 +12,7 @@ INSERT INTO `index_columnnumber` VALUES (2,'2');
 INSERT INTO `index_columnnumber` VALUES (3,'3');
 
 COMMIT;
+
+BEGIN TRANSACTION;
+INSERT INTO `index_arttype` VALUES (5,'PRINTS');
+COMMIT;

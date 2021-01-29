@@ -20,6 +20,12 @@ def home(request):
     des_list1 = ArtWork.objects.all().filter(art_type=4, column_number=1)
     des_list2 = ArtWork.objects.all().filter(art_type=4, column_number=2)
     des_list3 = ArtWork.objects.all().filter(art_type=4, column_number=3)
+
+    print_list1 = ArtWork.objects.all().filter(art_type=5, column_number=1)
+    print_list2 = ArtWork.objects.all().filter(art_type=5, column_number=2)
+    print_list3 = ArtWork.objects.all().filter(art_type=5, column_number=3)
+
+
     return render(
         request,
         'index/index_there.html',
@@ -36,5 +42,8 @@ def home(request):
             'des_list1': des_list1,
             'des_list1': des_list2,
             'des_list3': des_list3,
+            'print_list1': print_list1,
+            'print_list2': print_list2,
+            'print_list3': print_list3
         }
     )

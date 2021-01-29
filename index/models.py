@@ -20,14 +20,14 @@ class ColumnNumber(models.Model):
         return self.name
 
 class ArtWork(models.Model):
-    name = models.TextField(max_length=600)
-    price = models.DecimalField(decimal_places=2, max_digits=10, null=True)
-    size = models.CharField(max_length=100, null=True)
-    year = models.IntegerField(null=True)
+    name = models.TextField(max_length=600, null=True, blank=True)
+    price = models.DecimalField(decimal_places=2, max_digits=10, null=True, blank=True)
+    size = models.CharField(max_length=100, null=True, blank=True)
+    year = models.IntegerField(null=True, blank=True)
     art_type = models.ForeignKey(ArtType, on_delete=models.RESTRICT, default=1, help_text='Select art type')
     art_status = models.ForeignKey(ArtStatus, default=1, on_delete=models.RESTRICT, help_text='Select art status')
-    column_number = models.ForeignKey(ColumnNumber, default=1, on_delete=models.RESTRICT, help_text='Select art type', null=True)
-    photo = models.ImageField(upload_to='artWorks', null=True)
+    column_number = models.ForeignKey(ColumnNumber, default=1, on_delete=models.RESTRICT, help_text='Select art type', null=True, blank=True)
+    photo = models.ImageField(upload_to='artWorks', null=True, blank=True)
     
 
     def __str__(self):
