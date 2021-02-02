@@ -43,7 +43,7 @@ function OpenArtModal(photo, price, size, year, text) {
     document.getElementById("order").classList.add("w3-hide");
   }
   var orderMailDetails = document.getElementById("order");
-  orderMailDetails.href = orderMailDetails.href.replace("*artwort*",text);
+  orderMailDetails.href = orderMailDetails.href.replace("*artwort*","'"+text+"'");
 }
 
 // When the user clicks on <span> (x), close the modal
