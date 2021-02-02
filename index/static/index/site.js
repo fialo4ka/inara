@@ -20,11 +20,15 @@ var modal = document.getElementById("artModal");
 function OpenArtModal(photo, price, size, year, text) {
   modal.style.display = "block";
   document.getElementById("photo").src = "/artWorks/" + photo;
-  if(text != "None"){
-    document.getElementById("text").innerHTML = text;
-  }
-  var info = document.getElementById("info");
+  let info = document.getElementById("info"),
+  priceEl = document.getElementById("price"),
+  textEl = document.getElementById("text");
   info.innerHTML = "";
+  priceEl.innerHTML = "";
+  textEl.innerHTML = "";
+  if(text != "None"){
+    textEl.innerHTML = text;
+  }  
   if(size != "None"){
     info.innerHTML +="Size: " + size + ". ";
   }
@@ -32,7 +36,7 @@ function OpenArtModal(photo, price, size, year, text) {
     info.innerHTML += "Creation year " + year;
   }
   if(price != "None"){
-    document.getElementById("price").innerHTML = "Price: " + price + "Eu";
+    priceEl.innerHTML = "Price: " + price + "Eu";
     document.getElementById("order").classList.remove("w3-hide");
   }
   else{
