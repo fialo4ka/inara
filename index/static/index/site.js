@@ -43,7 +43,7 @@ function OpenArtModal(photo, price, size, year, text) {
     document.getElementById("order").classList.add("w3-hide");
   }
   var orderMailDetails = document.getElementById("order");
-  orderMailDetails.href = orderMailDetails.href.replace("*artwort*","'"+text+"'");
+  orderMailDetails.href = `mailto:lamachenno108@gmail.com?subject=Ortder artwork&body=Hello%20I'm%20interested%20in%20ordering%20artwork%20'`+text+"'";
 }
 
 // When the user clicks on <span> (x), close the modal
