@@ -20,17 +20,23 @@ var modal = document.getElementById("artModal");
 function OpenArtModal(photo, price, size, year, text) {
   modal.style.display = "block";
   document.getElementById("photo").src = "/artWorks/" + photo;
-  document.getElementById("text").innerHTML = text;
+  if(text != "None"){
+    document.getElementById("text").innerHTML = text;
+  }
   var info = document.getElementById("info");
   info.innerHTML = "";
-  if(size){
+  if(size != "None"){
     info.innerHTML +="Size: " + size + ". ";
   }
-  if(year){
+  if(year != "None"){
     info.innerHTML += "Creation year " + year;
   }
-  if(price){
+  if(price != "None"){
     document.getElementById("price").innerHTML = "Price: " + price + "Eu";
+    document.getElementById("order").classList.remove("w3-hide");
+  }
+  else{
+    document.getElementById("order").classList.add("w3-hide");
   }
   var orderMailDetails = document.getElementById("order");
   orderMailDetails.href = orderMailDetails.href.replace("*artwort*",text);
