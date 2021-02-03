@@ -36,7 +36,7 @@ function OpenArtModal(photo, price, size, year, text) {
     info.innerHTML += "Creation year " + year;
   }
   if(price != "None"){
-    priceEl.innerHTML = "Price: " + price + "Eu";
+    priceEl.innerHTML = "Price: " + price + " Eur";
     document.getElementById("order").classList.remove("w3-hide");
   }
   else{

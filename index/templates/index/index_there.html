@@ -15,7 +15,9 @@
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
     <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+        <a href="#home" class="w3-bar-item w3-button w3-wide" style="padding:0;">
+            <img src="{% static 'index/img/logo.jpg' %}" style="height:2.5rem;">
+        </a>
         <!-- Right-sided navbar links -->
         <div class="w3-right w3-hide-small">
         <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
@@ -24,7 +26,7 @@
         <a href="#graph" class="w3-bar-item w3-button">GRAPHICS</a>
         <a href="#gesig" class="w3-bar-item w3-button">DESIGN</a>  
         <a href="#prints" class="w3-bar-item w3-button">PRINTS</a>
-        <a href="#exhebition" class="w3-bar-item w3-button">EXHEBITIONS</a>
+        <a href="#exhebition" class="w3-bar-item w3-button">EXHIBITIONS</a>
         <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -44,15 +46,15 @@
     <a href="#graph" onclick="w3_close()" class="w3-bar-item w3-button">GRAPHICS</a>
     <a href="#gesig" onclick="w3_close()" class="w3-bar-item w3-button">DESIGN</a>
     <a href="#prints" onclick="w3_close()" class="w3-bar-item w3-button">PRINTS</a>
-    <a href="#exhebition" onclick="w3_close()" class="w3-bar-item w3-button">EXHEBITIONS</a>
+    <a href="#exhebition" onclick="w3_close()" class="w3-bar-item w3-button">EXHIBITIONS</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
     </nav>
 
     <!-- Header with full-height image -->
     <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home" style="background-image: url('{% static 'index/img/top.jpg' %}');">
         <div class="w3-display-bottomleft w3-container w3-sand w3-hover-light-grey" style="bottom:10%;opacity:0.7;width:70%">
-            <h2><b>Inara Petrusewicz</b></h2>
-            <h6>Artist / illustrator, Wall Painting designer </h6>
+            <h2><b>Inara</b></h2>
+            <h6>artist / illustrator, wall painting designer </h6>
         </div>
     </header>
 
@@ -256,7 +258,7 @@
             </div> 
         </div>        
     </div>
-    <!-- EXHEBITIONS Section -->
+    <!-- EXHIBITIONS Section -->
     <div class="w3-container w3-padding-64" id="exhebition">
         <h3 class="w3-center">Solo Exhibitions</h3>
         <p>
@@ -340,9 +342,9 @@
             <p><i class="fa fa-phone fa-fw w3-xlarge w3-margin-right"></i> Tel. +371 29793821</p>
             <p><i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right"> </i><a href="mailto:lamachenno108@gmail.com">Email: lamachenno108@gmail.com</a></p>
         </div>
-        <a src="https://www.facebook.com/inara.petrusevich"><i class="fa fa-facebook-official w3-hover-opacity w3-xxlarge"></i></a>
-        <a src="http://www.pinterest.com/inarapetrusevic/"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
-        <a src=""><i class="fa fa-instagram w3-hover-opacit w3-xxlarge"></i></a>
+        <a href="https://www.facebook.com/inara.petrusevich" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity w3-xxlarge"></i></a>
+        <a href="http://www.pinterest.com/inarapetrusevic/" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/inarapetrusevich/"><i class="fa fa-instagram w3-hover-opacit w3-xxlarge"></i></a>
         <p class="w3-small">Created by <a href="https://fialo.info" target="_blank" class="w3-hover-text-green">fialo4ka</a> 2021 All Rights Reserved.</p>
     </footer>
 
