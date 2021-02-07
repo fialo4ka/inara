@@ -1,0 +1,48 @@
+{% extends "index/base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">{{artType.name}}</h3><br>
+        
+        <div class="w3-row" style="margin-bottom:128px">
+            <div class="w3-third">
+                {% for art in list1 %}
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
+                        <img src="/artWorks/{{ art.photo }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>'{{ art.art_status }}'</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="w3-third">
+                {% for art in list2 %}
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
+                        <img src="/artWorks/{{ art.photo }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>'{{ art.art_status }}'</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="w3-third">
+                {% for art in list3 %}
+                    <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
+                        <img src="/artWorks/{{ art.photo }}" class="w3-round w3-image art-size" >
+                        <div class="w3-container w3-center">
+                            <p>'{{art.art_status }}'</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>            
+        </div>   
+        <div  class="w3-center">
+            <div class="w3-bar">
+                <a  class="w3-button w3-block w3-white w3-border" href="/">Home</a>
+            </div>
+        </div>  
+    </div>
+
+{% endblock %}

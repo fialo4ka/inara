@@ -1,54 +1,7 @@
- <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>
-        Inara Petrusewicz
-    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'index/w3.css/w3.css' %}"  />
-    <link rel="stylesheet" href="{% static 'index/stle.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-    <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <a href="#home" class="w3-bar-item w3-button w3-wide" style="padding:0;">
-            <img src="{% static 'index/img/logo.jpg' %}" style="height:2.5rem;">
-        </a>
-        <!-- Right-sided navbar links -->
-        <div class="w3-right w3-hide-small">
-        <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-        <a href="#akril" class="w3-bar-item w3-button">PAINTINGS</a>
-        <a href="#water" class="w3-bar-item w3-button">WATERCOLORS</a>
-        <a href="#graph" class="w3-bar-item w3-button">GRAPHICS</a>
-        <a href="#gesig" class="w3-bar-item w3-button">DESIGN</a>  
-        <a href="#prints" class="w3-bar-item w3-button">PRINTS</a>
-        <a href="#exhebition" class="w3-bar-item w3-button">EXHIBITIONS</a>
-        <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
-        </div>
-        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+{% extends "index/base.html" %}
+{% load static %}
 
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-        <i class="fa fa-bars"></i>
-        </a>
-    </div>
-    </div>
-
-    <!-- Sidebar on small screens when clicking the menu icon -->
-    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-    <a href="#akril" onclick="w3_close()" class="w3-bar-item w3-button">PAINTINGS</a>
-    <a href="#water" onclick="w3_close()" class="w3-bar-item w3-button">WATERCOLORS</a>
-    <a href="#graph" onclick="w3_close()" class="w3-bar-item w3-button">GRAPHICS</a>
-    <a href="#gesig" onclick="w3_close()" class="w3-bar-item w3-button">DESIGN</a>
-    <a href="#prints" onclick="w3_close()" class="w3-bar-item w3-button">PRINTS</a>
-    <a href="#exhebition" onclick="w3_close()" class="w3-bar-item w3-button">EXHIBITIONS</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-    </nav>
+{% block content %}
 
     <!-- Header with full-height image -->
     <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home" style="background-image: url('{% static 'index/img/top.jpg' %}');">
@@ -77,7 +30,7 @@
     <!-- PAINTINGS Section -->
     <div class="w3-container w3-padding-64" id="akril">
         <h3 class="w3-center">PAINTINGS</h3>
-        <div class="w3-row" id="myGrid" style="margin-bottom:128px">
+        <div class="w3-row"  style="margin-bottom:128px">
             <div class="w3-third">
                 {% for art in paint_list1 %}
                     <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
@@ -108,13 +61,18 @@
                     </div>
                 {% endfor %}
             </div>            
-        </div>        
+        </div>   
+        <div  class="w3-center">
+            <div class="w3-bar">
+                <a  class="w3-button w3-block w3-white w3-border" href="/more/1">Show more</a>
+            </div>
+        </div>     
     </div>
 
     <!-- WATERCOLORS Section -->
     <div class="w3-container w3-padding-64" id="water">
         <h3 class="w3-center">WATERCOLORS</h3>
-        <div class="w3-row" id="myGrid" style="margin-bottom:128px">
+        <div class="w3-row"  style="margin-bottom:128px">
             <div class="w3-third">
                 {% for art in water_list1 %}
                     <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
@@ -145,13 +103,18 @@
                     </div>
                 {% endfor %}
             </div> 
-        </div>        
+        </div> 
+        <div  class="w3-center">
+            <div class="w3-bar">
+                <a  class="w3-button w3-block w3-white w3-border" href="/more/2">Show more</a>
+            </div>
+        </div>       
     </div>
 
     <!-- GRAPHICS Section -->
     <div class="w3-container w3-padding-64" id="graph">
         <h3 class="w3-center">GRAPHICS</h3>
-        <div class="w3-row" id="myGrid" style="margin-bottom:128px">
+        <div class="w3-row"  style="margin-bottom:128px">
             <div class="w3-third">
                 {% for art in graph_list1 %}
                     <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
@@ -182,13 +145,18 @@
                     </div>
                 {% endfor %}
             </div> 
-        </div>        
+        </div>   
+        <div  class="w3-center">
+            <div class="w3-bar">
+                <a  class="w3-button w3-block w3-white w3-border" href="/more/3">Show more</a>
+            </div>
+        </div>     
     </div>
 
     <!-- DESIGN Section -->
     <div class="w3-container w3-padding-64" id="gesig">
         <h3 class="w3-center">DESIGN</h3>
-        <div class="w3-row" id="myGrid" style="margin-bottom:128px">
+        <div class="w3-row"  style="margin-bottom:128px">
             <div class="w3-third">
                 {% for art in des_list1 %}
                     <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
@@ -219,13 +187,18 @@
                     </div>
                 {% endfor %}
             </div> 
-        </div>        
+        </div>  
+        <div  class="w3-center">
+            <div class="w3-bar">
+                <a  class="w3-button w3-block w3-white w3-border" href="/more/4">Show more</a>
+            </div>
+        </div>      
     </div>
 
     <!-- prints Section -->
     <div class="w3-container w3-padding-64" id="prints">
         <h3 class="w3-center">PRINTS</h3>
-        <div class="w3-row" id="myGrid" style="margin-bottom:128px">
+        <div class="w3-row"  style="margin-bottom:128px">
             <div class="w3-third">
                 {% for art in print_list1 %}
                     <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
@@ -247,7 +220,7 @@
                 {% endfor %}
             </div>
             <div class="w3-third">
-                {% for art in print_list2 %}
+                {% for art in print_list3 %}
                     <div class="w3-card-4 m3 w3-border" onclick="OpenArtModal('{{ art.photo}}', '{{ art.price}}', '{{ art.size}}', '{{ art.year}}', '{{ art.name}}');">
                         <img src="/artWorks/{{ art.photo }}" class="w3-round w3-image art-size" >
                         <div class="w3-container w3-center">
@@ -256,8 +229,14 @@
                     </div>
                 {% endfor %}
             </div> 
-        </div>        
+        </div>  
+        <div  class="w3-center">
+            <div class="w3-bar">
+                <a  class="w3-button w3-block w3-white w3-border" href="/more/5">Show more</a>
+            </div>
+        </div>      
     </div>
+
     <!-- EXHIBITIONS Section -->
     <div class="w3-container w3-padding-64" id="exhebition">
         <h3 class="w3-center">Solo Exhibitions</h3>
@@ -333,40 +312,4 @@
             1990 “Autumn 90” Exhibition Hall of States Museum of Art Arsenals, Riga, Latvia<br/>
         </p> 
     </div>
-
-    <!-- CONTACT Section -->
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px" id="contact"> 
-        <h3 class="w3-center">CONTACT</h3>
-        <div style="margin-top:48px">
-            <p><i class="fa fa-phone fa-fw w3-xlarge w3-margin-right"></i> Tel. +371 29793821</p>
-            <p><i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right"> </i><a href="mailto:lamachenno108@gmail.com">Email: lamachenno108@gmail.com</a></p>
-        </div>
-        <a href="https://www.facebook.com/inara.petrusevich" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity w3-xxlarge"></i></a>
-        <a href="http://www.pinterest.com/inarapetrusevic/" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
-        <a href="https://www.instagram.com/inarapetrusevich/"><i class="fa fa-instagram w3-hover-opacit w3-xxlarge"></i></a>
-        <p class="w3-small">Created by <a href="https://fialo.info" target="_blank" class="w3-hover-text-green">fialo4ka</a> 2021 All Rights Reserved.</p>
-    </footer>
-
-    <div id="artModal" class="modal w3-modal">
-        <div class="modal-content w3-container">
-            <div>
-                <span class="modalClose" onclick="CloseArtModal();">&times;</span>
-            </div>
-            <div>
-                <div class="w3-col m6 w3-center">
-                    <img id="photo" class="w3-round w3-image" > 
-                </div>
-                <div class="w3-col m5 w3-center w3-margin-left">
-                    <div id="text" class="w3-left-align"></div>
-                    <div id="info" class="w3-left-align"></div>
-                    <div id="price" class="w3-left-align"></div>
-                    <a id="order" class="mailto" href="mailto:lamachenno108@gmail.com?subject=Ortder artwork&body=Hello%20I'm%20interested%20in%20ordering%20artwork%20*artwort*">Order</a>
-                </div> 
-            </div>
-        </div>
-    </div>
-        
-    <script src="{% static 'index/site.js' %}"></script>
-    </body>    
-</html> 
+{% endblock %}
