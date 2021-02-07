@@ -27,17 +27,17 @@ def home(request):
     if tempList.count() >= 3:
         water_list1= tempList
     else:
-        water_list1 = ArtWork.objects.all().filter(art_type=2, column_number=1).order_by('sort')
+        water_list1 = ArtWork.objects.all().filter(art_type=2, column_number=1).order_by('sort')[:5]
     tempList = ArtWork.objects.all().filter(art_type=2, column_number=2, art_status=2).order_by('sort')
     if tempList.count() >= 3:
         water_list2= tempList
     else:
-        water_list2 = ArtWork.objects.all().filter(art_type=2, column_number=2).order_by('sort')
+        water_list2 = ArtWork.objects.all().filter(art_type=2, column_number=2).order_by('sort')[:5]
     tempList = ArtWork.objects.all().filter(art_type=2, column_number=3, art_status=2).order_by('sort')
     if tempList.count() >= 3:
         water_list3= tempList
     else:
-        water_list3 = ArtWork.objects.all().filter(art_type=2, column_number=3).order_by('sort')
+        water_list3 = ArtWork.objects.all().filter(art_type=2, column_number=3).order_by('sort')[:5]
 
 
     
@@ -45,25 +45,25 @@ def home(request):
     if tempList.count() >= 3:
         graph_list1= tempList
     else:
-        graph_list1 = ArtWork.objects.all().filter(art_type=3, column_number=1).order_by('sort')
+        graph_list1 = ArtWork.objects.all().filter(art_type=3, column_number=1).order_by('sort')[:5]
     tempList = ArtWork.objects.all().filter(art_type=3, column_number=2, art_status=2).order_by('sort')
     if tempList.count() >= 3:
         graph_list2= tempList
     else:
-        graph_list2 = ArtWork.objects.all().filter(art_type=3, column_number=2).order_by('sort')    
+        graph_list2 = ArtWork.objects.all().filter(art_type=3, column_number=2).order_by('sort')[:5] 
     tempList = ArtWork.objects.all().filter(art_type=3, column_number=3, art_status=2).order_by('sort')
     if tempList.count() >= 3:
         graph_list3= tempList
     else:
-        graph_list3 = ArtWork.objects.all().filter(art_type=3, column_number=3).order_by('sort')   
+        graph_list3 = ArtWork.objects.all().filter(art_type=3, column_number=3).order_by('sort')[:5] 
 
-    des_list1 = ArtWork.objects.all().filter(art_type=4, column_number=1).order_by('sort')
-    des_list2 = ArtWork.objects.all().filter(art_type=4, column_number=2).order_by('sort')
-    des_list3 = ArtWork.objects.all().filter(art_type=4, column_number=3).order_by('sort')
+    des_list1 = ArtWork.objects.all().filter(art_type=4, column_number=1).order_by('sort')[:5]
+    des_list2 = ArtWork.objects.all().filter(art_type=4, column_number=2).order_by('sort')[:5]
+    des_list3 = ArtWork.objects.all().filter(art_type=4, column_number=3).order_by('sort')[:5]
 
-    print_list1 = ArtWork.objects.all().filter(art_type=5, column_number=1).order_by('sort')
-    print_list2 = ArtWork.objects.all().filter(art_type=5, column_number=2).order_by('sort')
-    print_list3 = ArtWork.objects.all().filter(art_type=5, column_number=3).order_by('sort')
+    print_list1 = ArtWork.objects.all().filter(art_type=5, column_number=1).order_by('sort')[:5]
+    print_list2 = ArtWork.objects.all().filter(art_type=5, column_number=2).order_by('sort')[:5]
+    print_list3 = ArtWork.objects.all().filter(art_type=5, column_number=3).order_by('sort')[:5]
 
 
     return render(
